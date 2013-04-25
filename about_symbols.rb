@@ -81,7 +81,7 @@ class AboutSymbols < Neo::Koan
 
   # It's important to realize that symbols are not "immutable
   # strings", though they are immutable. None of the
-  # interesting string operations are available on symbols.
+  # interesting string operations are available on symbols. 
 
   def test_symbols_cannot_be_concatenated
     # Exceptions will be pondered further down the path
