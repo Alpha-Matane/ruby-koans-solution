@@ -14,7 +14,17 @@
 #   about_triangle_project_2.rb
 #
 def triangle(a, b, c)
-  # WRITE THIS CODE
+  begin
+    fail TriangleError, "triangle sides must have non-zero values" if [a, b, c].min <= 0
+    fail TriangleError, "one of the triangle sides is too big" if (a>=b+c) || (b>=a+c) || (c>=a+b)
+    if a==b && a==c
+      :equilateral
+    elsif a == b || b == c || a == c
+      :isosceles
+    else
+      :scalene
+    end
+  end
 end
 
 # Error class used in part 2.  No need to change this code.
